@@ -1,7 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "color-hex-length": "short", // Replace color-hex-case with this
+    "color-hex-length": "short", 
     "block-no-empty": true
   }
 }
