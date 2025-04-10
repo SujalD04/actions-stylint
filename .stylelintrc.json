@@ -1,8 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "indentation": 2,
-    "color-hex-case": "lower",
+    "color-hex-length": "short", // Replace color-hex-case with this
     "block-no-empty": true
   }
 }
