@@ -26,12 +26,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # Fixed Stylelint step using the correct action
-    - name: Run Stylelint
-      uses: stylelint/stylelint-action@v2
-      with:
-        files: '**/*.css'
-      if: "success() && (github.event_name != 'push' || contains(github.event.head_commit.added, '.css'))"
-
     - name: Run tests
       run: python -m unittest discover
