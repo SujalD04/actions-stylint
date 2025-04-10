@@ -26,10 +26,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    # Fixed Stylelint step using the correct action
     - name: Run Stylelint
-      uses: actions/stylelint@v3
+      uses: stylelint/stylelint-action@v2
       with:
-        files: '**/*.css' 
+        files: '**/*.css' # Adjust this pattern if you have specific CSS file locations
 
     - name: Run tests
       run: python -m unittest discover
